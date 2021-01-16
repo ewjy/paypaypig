@@ -9,3 +9,5 @@ def pay(request):
     return render(request, 'pay-sel.html')
 def merchant(request):
     return render(request, 'merchant.html')    
+def results(request):
+    return render(request, 'results.html')

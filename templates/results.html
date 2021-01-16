@@ -5,14 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>選取支付方式</title>
+  <title>建議結果</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 	
   <!-- Favicons -->
   <link href="{%static 'main/img/favicon.png'%}" rel="icon">
   <link href="{%static 'main/img/favicon.png'%}" rel="apple-touch-icon">
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -44,7 +43,7 @@
 
       <h1 class="logo me-auto"><a href={%url 'main'%}>PAY PAY豬</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-  
+      <a href={%url 'main'%} class="logo me-auto"></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -63,79 +62,14 @@
 
         <ol>
           <li><a href={%url 'main' %}>首頁</a></li>
-          <li>選取支付方式</li>
+          <li>建議結果</li>
         </ol>
-        <h2>請選擇您使用的行動支付平台</h2>
+        <h2>請選擇您使用的通路</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <section class="inner-page">
-      <div class="container">
-        <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
 
-        <div class="row">
-			
-<div class="card-group">
-
-  <div class="card">
-    <img src="{%static 'main/img/pays/twpay.jpg'%}" class="card-img-top" style="heght: 18rem;" alt="">
-    <div class="card-body">
-      <h5 class="card-title">台灣Pay</h5>
-	<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="twpay" id="twpay-sel" autocomplete="off">
-  <label class="btn btn-outline-primary" for="twpay-sel">選取</label>
-
-  <input type="radio" class="btn-check" name="twpay" id="twpay-desel" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="twpay-desel">不選</label>
-		
-</div>
-    </div>
-  </div>	
-	
-  <div class="card">
-    <img src="{%static 'main/img/pays/line_pay.png'%}" class="card-img-top" style="heght: 18rem;" alt="">
-    <div class="card-body">
-      <h5 class="card-title">Line Pay</h5>
-	<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="line-pay" id="line-pay-sel" autocomplete="off">
-  <label class="btn btn-outline-primary" for="line-pay-sel">選取</label>
-
-  <input type="radio" class="btn-check" name="line-pay" id="line-pay-desel" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="line-pay-desel">不選</label>
-		
-</div>
-    </div>
-  </div>
-	
-  <div class="card">
-    <img src="{%static 'main/img/pays/samsung-pay.png'%}" class="card-img-top" style="heght: 18rem;" alt="">
-    <div class="card-body">
-      <h5 class="card-title">Samsung Pay</h5>
-	<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="samsung-pay" id="samsung-pay-sel" autocomplete="off">
-  <label class="btn btn-outline-primary" for="samsung-pay-sel">選取</label>
-
-  <input type="radio" class="btn-check" name="samsung-pay" id="samsung-pay-desel" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="samsung-pay-desel">不選</label>
-		
-</div>
-    </div>
-  </div>
-	
-</div>
-
-			
-			
-        </div>
-
-      </div>
-    </section>
-		  <a class="btn btn-secondary" href={%url 'bank'%} role="button">上一步</a>
-		  <a class="btn btn-success" href={%url 'merchant'%} role="button">下一步</a>
-      </div>
-    </section>
 
   </main><!-- End #main -->
 

@@ -83,7 +83,7 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-3 col-md-5 portfolio-item filter-conv">
-            <div class="portfolio-img"><img src="{%static 'main/img/merchants/711.png'%}" class="img-fluid" alt=""></div>
+            <a href="{% url 'results' %}"><div class="portfolio-img"><img src="{%static 'main/img/merchants/711.png'%}" class="img-fluid" alt=""></div></a>
             <div class="portfolio-info">
               <h4>7-Eleven</h4>
               <p>超商</p>
@@ -92,7 +92,7 @@
           </div>
 
           <div class="col-lg-3 col-md-5 portfolio-item filter-conv">
-            <div class="portfolio-img"><img src="{%static 'main/img/merchants/family.jpg'%}" class="img-fluid" alt=""></div>
+            <a href="{% url 'results' %}"><div class="portfolio-img"><img src="{%static 'main/img/merchants/family.jpg'%}" class="img-fluid" alt=""></div></a>
             <div class="portfolio-info">
               <h4>全家</h4>
               <p>超商</p>
@@ -101,7 +101,7 @@
           </div>			
 			
           <div class="col-lg-3 col-md-5 portfolio-item filter-conv">
-            <div class="portfolio-img"><img src="{%static 'main/img/merchants/hi-life.png'%}" class="img-fluid" alt=""></div>
+            <a href="{% url 'results' %}"><div class="portfolio-img"><img src="{%static 'main/img/merchants/hi-life.png'%}" class="img-fluid" alt=""></div></a>
             <div class="portfolio-info">
               <h4>萊爾富</h4>
               <p>超商</p>
@@ -110,7 +110,7 @@
           </div>				
 			
 		<div class="col-lg-3 col-md-5 portfolio-item filter-conv">
-            <div class="portfolio-img"><img src="{%static 'main/img/merchants/ok.png'%}" class="img-fluid" alt=""></div>
+            <a href="{% url 'results' %}"><div class="portfolio-img"><img src="{%static 'main/img/merchants/ok.png'%}" class="img-fluid" alt=""></div></a>
             <div class="portfolio-info">
               <h4>OK</h4>
               <p>超商</p>
@@ -119,7 +119,7 @@
           </div>				
 			
 		<div class="col-lg-3 col-md-5 portfolio-item filter-wholesale">
-            <div class="portfolio-img"><img src="{%static 'main/img/merchants/rt-mart.jpg'%}" class="img-fluid" alt=""></div>
+            <a href="{% url 'results' %}"><div class="portfolio-img"><img src="{%static 'main/img/merchants/rt-mart.jpg'%}" class="img-fluid" alt=""></div></a>
             <div class="portfolio-info">
               <h4>大潤發</h4>
               <p>量販店</p>
@@ -128,7 +128,7 @@
           </div>				
 			
 		<div class="col-lg-3 col-md-5 portfolio-item filter-wholesale">
-            <div class="portfolio-img"><img src="{%static 'main/img/merchants/carrefour.png'%}" class="img-fluid" alt=""></div>
+            <a href="{% url 'results' %}"><div class="portfolio-img"><img src="{%static 'main/img/merchants/carrefour.png'%}" class="img-fluid" alt=""></div></a>
             <div class="portfolio-info">
               <h4>家樂福</h4>
               <p>量販店</p>
@@ -137,7 +137,7 @@
           </div>				
 			
 		<div class="col-lg-3 col-md-5 portfolio-item filter-wholesale">
-            <div class="portfolio-img"><img src="{%static 'main/img/merchants/costco.png'%}" class="img-fluid" alt=""></div>
+            <a href="{% url 'results' %}"><div class="portfolio-img"><img src="{%static 'main/img/merchants/costco.png'%}" class="img-fluid" alt=""></div></a>
             <div class="portfolio-info">
               <h4>好市多</h4>
               <p>量販店</p>
@@ -146,7 +146,7 @@
           </div>				
 			
 		<div class="col-lg-3 col-md-5 portfolio-item filter-dept">
-            <div class="portfolio-img"><img src="{%static 'main/img/merchants/far_eastern.png'%}" class="img-fluid" alt=""></div>
+            <a href="{% url 'results' %}"><div class="portfolio-img"><img src="{%static 'main/img/merchants/far_eastern.png'%}" class="img-fluid" alt=""></div></a>
             <div class="portfolio-info">
               <h4>遠東百貨</h4>
               <p>百貨</p>
@@ -155,15 +155,15 @@
           </div>				
 			
 		<div class="col-lg-3 col-md-5 portfolio-item filter-dept">
-            <div class="portfolio-img"><img src="{%static 'main/img/merchants/skm.png'%}" class="img-fluid" alt=""></div>
+            <a href="{% url 'results' %}"><div class="portfolio-img"><img src="{%static 'main/img/merchants/skm.png'%}" class="img-fluid" alt=""></div></a>
             <div class="portfolio-info">
               <h4>新光三越</h4>
               <p>百貨</p>
               <a href={%url 'results' %} class="details-link"><i class="bx bx-link"></i></a>
             </div>
           </div>				
-			
         </div>
+		<a class="btn btn-secondary" href={%url 'pay'%} role="button">上一步</a>
       </div>
     </section><!-- End Portfolio Section -->
 

@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath paypaypig paypaypig.wsgi

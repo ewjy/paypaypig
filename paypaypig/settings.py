@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 
+SECRET_KEY = '*_h+s0e2v&%w_!d+7qn-@2)mke^soae4nm6*2!sdgrq1@-*x&y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +121,68 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static") ]
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, "serviceworker.js") 
+
+#pwa manifest
+PWA_APP_NAME = 'PayPayPig'
+PWA_APP_DESCRIPTION = "EZ pay, pay EZ!"
+PWA_APP_THEME_COLOR = '#0A0302'
+PWA_APP_BACKGROUND_COLOR = '#ffffff'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_SCOPE = '/'
+PWA_APP_ORIENTATION = 'any'
+PWA_APP_START_URL = '/'
+PWA_APP_STATUS_BAR_COLOR = 'default'
+PWA_APP_ICONS = [
+    {
+        'src': '/static/main/img/android-launchericon-48-48.png',
+        'sizes': '48x48'
+    },
+    {
+        'src': '/static/main/img/android-launchericon-72-72.png',
+        'sizes': '72x72'
+    },
+    {
+        'src': '/static/main/img/android-launchericon-96-96.png',
+        'sizes': '96x96'
+    },
+    {
+        'src': '/static/main/img/android-launchericon-144-144.png',
+        'sizes': '144x144'
+    },
+    {
+        'src': '/static/main/img/android-launchericon-192-192.png',
+        'sizes': '192x192'
+    },{
+        'src': '/static/main/img/android-launchericon-512-512.png',
+        'sizes': '512x512'
+    }
+]
+PWA_APP_ICONS_APPLE = [
+    {
+        'src': '/static/main/img/android-launchericon-48-48.png',
+        'sizes': '48x48'
+    },
+    {
+        'src': '/static/main/img/android-launchericon-72-72.png',
+        'sizes': '72x72'
+    },
+    {
+        'src': '/static/main/img/android-launchericon-96-96.png',
+        'sizes': '96x96'
+    },
+    {
+        'src': '/static/main/img/android-launchericon-144-144.png',
+        'sizes': '144x144'
+    },
+    {
+        'src': '/static/main/img/android-launchericon-192-192.png',
+        'sizes': '192x192'
+    },{
+        'src': '/static/main/img/android-launchericon-512-512.png',
+        'sizes': '512x512'
+    }
+]
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'en-US'
+

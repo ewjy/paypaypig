@@ -42,13 +42,13 @@
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href={%url 'main'%}>PAY PAY豬</a></h1>
+      <h1 class="logo me-auto"><a href="{%url 'main' %}">PAY PAY豬</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
   
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><a href={%url 'main' %}>首頁</a></li>
+          <li><a href="{%url 'main' %}">首頁</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -62,7 +62,7 @@
       <div class="container">
 
         <ol>
-          <li><a href={%url 'main' %}>首頁</a></li>
+          <li><a href="{%url 'main' %}>">首頁</a></li>
           <li>選取支付方式</li>
         </ol>
         <h2>請選擇您使用的行動支付平台</h2>
@@ -76,54 +76,49 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-			
+
+<form action="{% url 'merchant' %}" method="POST"> 
+{% csrf_token %} 
 <div class="card-group">
-
-  <div class="card">
-    <img src="{%static 'main/img/pays/twpay.jpg'%}" class="card-img-top" style="heght: 18rem;" alt="">
-    <div class="card-body">
-      <h5 class="card-title">台灣Pay</h5>
-	<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="twpay" id="twpay-sel" autocomplete="off">
-  <label class="btn btn-outline-primary" for="twpay-sel">選取</label>
-
-  <input type="radio" class="btn-check" name="twpay" id="twpay-desel" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="twpay-desel">不選</label>
-		
-</div>
-    </div>
-  </div>	
 	
   <div class="card">
-    <img src="{%static 'main/img/pays/line_pay.png'%}" class="card-img-top" style="heght: 18rem;" alt="">
+    <img src="{%static 'main/img/pays/line_pay.png'%}" class="card-img-top img-fluid" alt="">
     <div class="card-body">
       <h5 class="card-title">Line Pay</h5>
-	<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="line-pay" id="line-pay-sel" autocomplete="off">
-  <label class="btn btn-outline-primary" for="line-pay-sel">選取</label>
-
-  <input type="radio" class="btn-check" name="line-pay" id="line-pay-desel" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="line-pay-desel">不選</label>
-		
-</div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="line_pay" id="line_pay1" value="line_pay1">
+        <label class="form-check-label" for="line_pay1">
+          我<b><u>有</u></b>在用這個支付平台
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="line_pay" id="line_pay0" value="line_pay0" checked>
+        <label class="form-check-label" for="line_pay0">
+          我<b><u>沒有</u></b>在用這個支付平台
+        </label>
+      </div>
     </div>
   </div>
-	
+
   <div class="card">
-    <img src="{%static 'main/img/pays/samsung-pay.png'%}" class="card-img-top" style="heght: 18rem;" alt="">
+    <img src="{%static 'main/img/pays/jkopay.png'%}" class="card-img-top img-fluid" alt="">
     <div class="card-body">
-      <h5 class="card-title">Samsung Pay</h5>
-	<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="samsung-pay" id="samsung-pay-sel" autocomplete="off">
-  <label class="btn btn-outline-primary" for="samsung-pay-sel">選取</label>
-
-  <input type="radio" class="btn-check" name="samsung-pay" id="samsung-pay-desel" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="samsung-pay-desel">不選</label>
-		
-</div>
+      <h5 class="card-title">街口支付</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="jkopay" id="jkopay1" value="jkopay1">
+        <label class="form-check-label" for="jkopay1">
+          我<b><u>有</u></b>在用這個支付平台
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="jkopay" id="jkopay0" value="jkopay0" checked>
+        <label class="form-check-label" for="jkopay0">
+          我<b><u>沒有</u></b>在用這個支付平台
+        </label>
+      </div>
     </div>
   </div>
-	
+
 </div>
 
 			
@@ -132,9 +127,10 @@
 
       </div>
     </section>
-		  <a class="btn btn-secondary" href={%url 'bank'%} role="button">上一步</a>
-		  <a class="btn btn-success" href={%url 'merchant'%} role="button">下一步</a>
+      <a href="{% url 'bank' %}" class="btn btn-secondary" role="button">上一步</a></a>
+		  <button class="btn btn-success" type="submit">下一步</a>
       </div>
+    </form>
     </section>
 
   </main><!-- End #main -->

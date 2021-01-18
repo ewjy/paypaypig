@@ -42,13 +42,13 @@
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href={%url 'main'%}>PAY PAY豬</a></h1>
+      <h1 class="logo me-auto"><a href="{%url 'main' %}">PAY PAY豬</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
     
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><a href={%url 'main' %}>首頁</a></li>
+          <li><a href="{%url 'main' %}">首頁</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -62,7 +62,7 @@
       <div class="container">
 
         <ol>
-          <li><a href={%url 'main' %}>首頁</a></li>
+          <li><a href="{%url 'main' %}">首頁</a></li>
           <li>選取銀行</li>
         </ol>
         <h2>請選擇您使用的銀行</h2>
@@ -76,64 +76,94 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-			
-<div class="card-group">
 
+<form action="{% url 'pay' %}" method="POST">              
+{% csrf_token %}
+<div class="card-group">          
   <div class="card">
-    <img src="{%static 'main/img/banks/FB.png'%}" class="card-img-top" style="heght: 18rem;" alt="">
+    <img src="{%static 'main/img/banks/tsib.png'%}" class="card-img-top img-fluid" alt="">
     <div class="card-body">
-      <h5 class="card-title">第一銀行</h5>
-	<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="fb" id="fb-sel" autocomplete="off">
-  <label class="btn btn-outline-primary" for="fb-sel">選取</label>
-
-  <input type="radio" class="btn-check" name="fb" id="fb-desel" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="fb-desel">不選</label>
-		
-</div>
+      <h5 class="card-title">台新銀行</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="tsib" id="tsib1" value="tsib1">
+        <label class="form-check-label" for="tsib1">
+          我<b><u>有</u></b>在用這家銀行
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="tsib" id="tsib0" value="tsib0" checked>
+        <label class="form-check-label" for="tsib0">
+          我<b><u>沒有</u></b>在用這家銀行
+        </label>
+      </div>
     </div>
   </div>
-	
-  <div class="card">
-    <img src="{%static 'main/img/banks/HNB.png'%}" class="card-img-top" style="heght: 18rem;" alt="">
-    <div class="card-body">
-      <h5 class="card-title">第一銀行</h5>
-	<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="iplan" id="iplan-sel" autocomplete="off">
-  <label class="btn btn-outline-primary" for="iplan-sel">選取</label>
 
-  <input type="radio" class="btn-check" name="iplan" id="iplan-desel" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="iplan-desel">不選</label>
-		
+  <div class="card">
+    <img src="{%static 'main/img/banks/fubon.png'%}" class="card-img-top img-fluid" alt="">
+    <div class="card-body">
+      <h5 class="card-title">富邦銀行</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="fubon" id="fubon1" value="fubon1">
+        <label class="form-check-label" for="fubon1">
+          我<b><u>有</u></b>在用這家銀行
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="fubon" id="fubon0" value="fubon0" checked>
+        <label class="form-check-label" for="fubon0">
+          我<b><u>沒有</u></b>在用這家銀行
+        </label>
+      </div>
 </div>
     </div>
-  </div>
 	
   <div class="card">
-    <img src="{%static 'main/img/banks/CTBC.png'%}" class="card-img-top" style="heght: 18rem;" alt="">
+    <img src="{%static 'main/img/banks/citi.png'%}" class="card-img-top img-fluid" alt="">
+    <div class="card-body">
+      <h5 class="card-title">花旗銀行</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="citi" id="citi1" value="citi1">
+        <label class="form-check-label" for="citi1">
+          我<b><u>有</u></b>在用這家銀行
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="citi" id="citi0" value="citi0" checked>
+        <label class="form-check-label" for="citi0">
+          我<b><u>沒有</u></b>在用這家銀行
+        </label>
+      </div>
+</div>
+    </div>
+
+  <div class="card">
+    <img src="{%static 'main/img/banks/ctbc.png'%}" class="card-img-top img-fluid" alt="">
     <div class="card-body">
       <h5 class="card-title">中國信託銀行</h5>
-	<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="ctbc" id="ctbc-sel" autocomplete="off">
-  <label class="btn btn-outline-primary" for="ctbc-sel">選取</label>
-
-  <input type="radio" class="btn-check" name="ctbc" id="ctbc-desel" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="ctbc-desel">不選</label>
-		
-</div>
-    </div>
-  </div>
-	
-</div>
-
-			
-			
-        </div>
-
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="ctbc" id="ctbc1" value="ctbc1">
+        <label class="form-check-label" for="ctbc1">
+          我<b><u>有</u></b>在用這家銀行
+        </label>
       </div>
-    </section>
-		  <a class="btn btn-success" href={%url 'pay'%} role="button">下一步</a>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="ctbc" id="ctbc0" value="ctbc0" checked>
+        <label class="form-check-label" for="ctbc0">
+          我<b><u>沒有</u></b>在用這家銀行
+        </label>
       </div>
+</div>
+    </div>    
+  </div>  
+</div>	
+<p></p>
+<button class="btn btn-success" type="submit">下一步</a>    
+        </div>                
+      </div>      
+    </section>    
+      </div>
+    </form>
     </section>
 
   </main><!-- End #main -->

@@ -12,22 +12,13 @@ def pay(request):
     return render(request, 'pay-sel.html')
 def merchant(request):
     return render(request, 'merchant.html')    
-def results(request):
-        return render(request, 'result1.html')
 def result1(request):
-        return render(request, 'result1.html')   
+        return render(request, 'result1.html')
 def result2(request):
-        return render(request, 'result1.html')
-def result3(request):
-        return render(request, 'result1.html')
-def result4(request):
-        return render(request, 'result1.html')
-def result5(request):
-        return render(request, 'result1.html')
-def result6(request):
-        return render(request, 'result1.html')
-def result7(request):
-        return render(request, 'result1.html')
+        return render(request, 'result2.html')   
+def results(request):
+        return render(request, 'results.html')   
+
 def postBank(request):
     if request.is_ajax and request.method == "POST":
         form = UserForm(request.POST)

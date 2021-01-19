@@ -125,7 +125,7 @@ PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, "serviceworker.js")
 
 #pwa manifest
 PWA_APP_NAME = 'PayPayPig'
-PWA_APP_DESCRIPTION = "EZ pay, pay EZ!"
+PWA_APP_DESCRIPTION = "EZ pay, pay Ez"
 PWA_APP_THEME_COLOR = '#0A0302'
 PWA_APP_BACKGROUND_COLOR = '#ffffff'
 PWA_APP_DISPLAY = 'standalone'

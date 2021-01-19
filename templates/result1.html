@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
-{% load static%}
+{% load static %}
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>選取銀行</title>
+  <title>建議結果</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 	
   <!-- Favicons -->
   <link href="{%static 'main/img/favicon.png'%}" rel="icon">
   <link href="{%static 'main/img/favicon.png'%}" rel="apple-touch-icon">
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -27,42 +26,13 @@
 
   <!-- Template Main CSS File -->
   <link href="{%static 'main/css/style.css' %}" rel="stylesheet">
-  <!-- request-->
-  <script type="text/javascript">
-  $('a.btn-success').click(function(){
-    if(document.getElementById("city-sel").checked){
 
-    }else if (document.getElementById("city-desel").checked){
-
-    }
-    if(document.getElementById("tnew-sel").checked){
-
-    }else if (document.getElementById("tnew-desel").checked){
-
-    }
-    if(document.getElementById("ctbc-sel").checked){
-
-    }else if (document.getElementById("ctbc-desel").checked){
-
-    }
-    $.ajax(
-      {
-        type: "POST",
-        url: "{% url 'results' %}"
-        data:{
-
-        }
-      }
-    )
-  })
-  </script>
   <!-- =======================================================
   * Template Name: Arsha - v3.0.3
   * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-
 </head>
 
 <body>
@@ -73,7 +43,7 @@
 
       <h1 class="logo me-auto"><a href={%url 'main'%}>PAY PAY豬</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-    
+      <a href={%url 'main'%} class="logo me-auto"></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -92,87 +62,34 @@
 
         <ol>
           <li><a href={%url 'main' %}>首頁</a></li>
-          <li>選取銀行</li>
+          <li>建議結果</li>
         </ol>
-        <h2>請選擇您使用的銀行</h2>
+        <h2>根據您的選擇，建議的支付搭配如下：</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
-
     <section class="inner-page">
       <div class="container">
-        <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-<div class="card-group">
-  <div class="card">
-    <img src="{%static 'main/img/banks/citibank.png'%}" class="card-img-top" style="heght: 18rem;" alt="">
-    <div class="card-body">
-      <h5 class="card-title">花旗銀行</h5>
-	<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="city" id="city-sel" autocomplete="off">
-  <label class="btn btn-outline-primary" for="city-sel">選取</label>
-
-  <input type="radio" class="btn-check" name="city" id="city-desel" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="city-desel">不選</label>
-		
-</div>
-    </div>
-  </div>
-	
-  <div class="card">
-    <img src="{%static 'main/img/banks/tnew.PNG'%}" class="card-img-top" style="heght: 18rem;" alt="">
-    <div class="card-body">
-      <h5 class="card-title">台新銀行</h5>
-	<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="tnew" id="tnew-sel" autocomplete="off">
-  <label class="btn btn-outline-primary" for="tnew-sel">選取</label>
-  <input type="radio" class="btn-check" name="tnew" id="tnew-desel" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="tnew-desel">不選</label>
-		
-</div>
-    </div>
-  </div>
-	
-  <div class="card">
-    <img src="{%static 'main/img/banks/CTBC.png'%}" class="card-img-top" style="heght: 18rem;" alt="">
-    <div class="card-body">
-      <h5 class="card-title">中國信託銀行</h5>
-	<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="ctbc" id="ctbc-sel" autocomplete="off">
-  <label class="btn btn-outline-primary" for="ctbc-sel">選取</label>
-
-  <input type="radio" class="btn-check" name="ctbc" id="ctbc-desel" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="ctbc-desel">不選</label>
-		
-</div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="{%static 'main/img/banks/Fubon.png'%}" class="card-img-top" style="heght: 18rem;" alt="">
-    <div class="card-body">
-      <h5 class="card-title">富邦銀行</h5>
-	<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="fubon" id="fubon-sel" autocomplete="off">
-  <label class="btn btn-outline-primary" for="fubon-sel">選取</label>
-
-  <input type="radio" class="btn-check" name="fubon" id="fubon-desel" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="fubon-desel">不選</label>
-		
-</div>
-    </div>
-  </div>
-		
-</div>
-
-			
-			
-        </div>
-
-      </div>
-    </section>
-		  <a class="btn btn-success" href={%url 'pay'%} role="button">下一步</a>
+      <form id='form'>
+        <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-4">
+                {% csrf_token %}
+                <img src="{%static 'main/img/pays/line_pay.png'%}" alt="" class="img-fluid">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">【國內一般消費享LINE POINTS 3%回饋無上限!】</p>
+                  <p class="card-text"><small class="text-muted">【即日起到6月30號，使用台北富邦J Point卡可享Line Points 3%回饋!】</small></p>
+                  <img src="{%static 'main/img/pays/jpoint.PNG/'%}" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+        </div>	  
+        <a class="btn btn-secondary" href={%url 'merchant'%} role="button">上一步</a>
+        <a class="btn btn-primary" href={%url 'bank'%} role="button">【清除資料並重來】</a>
+      </form>
       </div>
     </section>
 
@@ -211,7 +128,7 @@
 
   <!-- Template Main JS File -->
   <script src="{%static 'main/js/main.js'%}"></script>
-  
+
 </body>
 
 </html>
